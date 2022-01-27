@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Smartebusiness technical test">
+    <title>Smartebusiness - Technical Test</title>
+    <link rel="icon" href="./images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./font-awesome/css/font-awesome.min.css" type="text/css" media="screen">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            //hide contact form and information buttons
+            $(".contact_btn").hide();
+            $(".info_btn").hide();
+
+            if ($(window).width() < 800) {
+                //if screen width is less than 800 show buttons and hide content
+                $(".contact_btn").show();
+                $(".info_btn").show();
+                $(".contact_form").hide();
+                $(".info_box").hide();
+
+                //if contact form button clicked 
+                $(".contact_btn").click(function () {
+                    $(".contact_form").toggle();
+                });
+
+                //if information button clicked 
+                $(".info_btn").click(function () {
+                    $(".info_box").toggle();
+                });
+            };
+        });
+    </script>
+</head>
+
+<body>
+    <header>
+        <img src="./images/logo.png" alt="Smartebusiness logo" class="logo_png">
+    </header>
+
+    <nav>
+        <div class="nav_text">
+            <p class="small_header">Home/<b>Contact Us</b></p>
+            <h1>Contact Us</h1>
+        </div>
+
+        <div class="nav_img">
+            <img src="./images/smartebusiness_location.png" alt="Smartebusiness location" class="img_location">
+        </div>        
+    </nav>
+
+    <section>
+        <button type="button" class="contact_btn" id="contact">Contact Form</button><br>
+        <div class="contact_form">
+            <h1>Contact Information</h1>
+            <form>
+                <label for="name">*Name</label><br>
+                <input type="text" id="name" name="name" required><br>
+                
+                <label for="email">*Email</label><br>
+                <input type="email" id="email" name="email" required><br>
+                
+                <label for="phone">Telephone</label><br>
+                <input type="tel" id="phone" name="phone"><br>
+            
+                <label for="comment">*Comment</label><br>
+                <textarea id="comment" name="comment" style="height:50px" required></textarea><br>
+            
+                <input type="submit" value="SUBMIT" class="form_btn">
+              </form>
+        </div>
+
+        <button type="button" class="info_btn" id="info">Contact Information</button><br>
+        <div class="info_box">
+            <p>
+                Please note that calls may be monitored or recorded for the purposes of quality control.Please also be aware we don't have a showroom, we offer competitive prices over the internet, and visit numerous national consumer shows throughout the year
+            </p>
+
+            <p><b>Customer support opening hours</b></p>
+            
+            <p>Monday to Friday 9am to 5pm</p>
+
+            <p>
+                If all support staff are busy, please leave a message and we will return your call as soon as we can - usually within 24 hours.
+            </p>
+
+            <p><b>Customer Service Telephone:</b> 0161 236 2503</p>
+
+            <p><b>Email:</b> <a href="mailto:support@smartebusiness.co.uk">support@smartebusiness.co.uk</a> </p>
+
+            <p><b>Sale's Hotline:</b> 0161 236 2503</p>
+
+            <p>
+                <b>Head Office Address</b><br>
+                Smartebusiness<br>
+                41a Newton Street<br>
+                Greater Manchester<br>
+                M1 1FT<br>
+                United Kingdom                
+            </p>
+        </div>
+    </section>
+
+    <footer class="main_footer">
+        <div>
+            <p><b>Our store</b></p>
+            <ul>
+                <li>Terms & Conditions</li>
+                <li>About Us</li>
+                <li>Contact Us</li>
+                <li>FAQs</li>
+                <li>Company Info</li>
+                <li>Lorem ipsum</li>
+                <li>Delivery Tracking</li>
+            </ul>
+        </div>
+        <div>
+            <p><b>Site links</b></p>
+            <ul>
+                <li>Indoor Water Features</li>
+                <li>Aqua Creations Water Features</li>
+                <li>Granite Water Features</li>
+                <li>Solar Water Features</li>
+                <li>Pond Water Features</li>
+                <li>Smart Solar Fountains</li>
+                <li>Pond Pumps</li>
+                <li>Pebble Pools & Grids</li>
+                <li>Water Feature Care</li>
+                <li>Sandstone Water Features</li>          
+            </ul>
+        </div>
+        <div>
+            <br class="doublebr">
+            <ul>
+                <li>Garden Water Feature</li>
+                <li>Stainless Steel Water Features</li>
+                <li>Bubble Water Walls</li>
+                <li>Patio Water Features</li>
+                <li>Kelkay Water Features</li>
+                <li>Water Feature Pumps</li>
+                <li>Solar Fountain Pumps</li>
+                <li>Water Feature Lighting</li>
+                <li>Aqua Moda Water Features</li>
+                <li>Lorem ipsum
+                </ul>
+        </div>
+        <div>
+            <p><b>Connect with us</b></p>
+            <p>
+                <i class="icon-twitter-sign"></i>
+                <i class="icon-facebook-sign"></i>
+                <i class="icon-google-plus-sign"></i>
+                <i class="icon-instagram"></i>
+                <i class="icon-pinterest-sign"></i>
+            </p>
+            <br>
+            <p><b>Newsletter Signup</b></p>
+            <div class="newsletter">
+                <input type="email" id="newsletter" name="email" placeholder="Your email">
+
+                <input type="submit" value="Submit" class="newsletter_btn">
+            </div>
+        </div>
+    </footer>
+    <footer class="footer_banner">
+        <div>
+            <p>
+                Copyright © 2017 Smartebusiness - Registered in England: 50506021 - VAT: 843 0826 343<br>
+                Smartebusiness - Manchester - M1 1FT
+            </p>
+        </div>
+        <div class="payment">
+            <img src="./images/accepted_payment.png" alt="Accepted payment methods">            
+        </div>
+    </footer>
+</body>
+</html>
